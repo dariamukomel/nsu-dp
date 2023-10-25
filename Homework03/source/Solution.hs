@@ -36,6 +36,7 @@ cantorPairs = gen1 0 0
     where gen1 x y = if x == 0 then (0, y): gen1 (y + 1) 0 else (x, y): gen1 (x - 1) (y + 1)
 
 
+
 distance (x1, y1) (x2, y2) = sqrt ((x1-x2)^2 + (y1-y2)^2)
 ans l = minimum [distance (head l) (p)| p<- tail l]
 
