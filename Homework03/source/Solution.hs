@@ -20,15 +20,15 @@ unique l
 
 
 pythagoreanTriples :: Integral a => [(a, a, a)]
-pythagoreanTriples = [(b, a, c) | c<-[1..100], a<-[1..100], b<-[1..a],  a^2 + b^2 == c^2]
+pythagoreanTriples = [(b, a, c) | c<-[1..], a<-[1..], b<-[1..a],  a^2 + b^2 == c^2]
 
 
 primitivePythagoreanTriples :: Integral a => [(a, a, a)]
-primitivePythagoreanTriples = [(b, a, c) | c<-[1..100], a<-[1..100], b<-[1..a],  a^2 + b^2 == c^2 && b<a && gcd a b ==1]
+primitivePythagoreanTriples = [(b, a, c) | c<-[1..], a<-[1..], b<-[1..a],  a^2 + b^2 == c^2 && b<a && gcd a b ==1]
 
 
 perfectNumbers :: Integral a => [a]
-perfectNumbers = [x | x<-[1..8128], x==sum [ d | d<-[1..x-1], x `mod` d==0]]
+perfectNumbers = [x | x<-[1..], x==sum [ d | d<-[1..x-1], x `mod` d==0]]
 
 
 cantorPairs :: Integral a => [(a, a)]
